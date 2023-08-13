@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
 	styleUrls: ['./person.component.css']
 })
 export class PersonComponent {
+	name: string = 'Juan';
+	lastname: string = 'Perez';
+	private age: number = 28;
 
+	getAge(): number {
+		return this.age;
+	}
 }
