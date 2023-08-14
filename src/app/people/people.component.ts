@@ -13,8 +13,4 @@ export class PeopleComponent {
 	addPerson() {
 		this.message = 'Added a person.';
 	}
-
-	setTitle(event: Event) {
-		this.title = (<HTMLInputElement>event.target).value;
-	}
 }
