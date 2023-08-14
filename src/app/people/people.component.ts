@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
 	selector: 'app-people',
@@ -6,5 +6,15 @@ import {Component} from "@angular/core";
 	styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
+	disable: boolean = false;
+	message: string = 'No person was added.'
+	title: string = '';
 
+	addPerson() {
+		this.message = 'Added a person.';
+	}
+
+	setTitle(event: Event) {
+		this.title = (<HTMLInputElement>event.target).value;
+	}
 }
