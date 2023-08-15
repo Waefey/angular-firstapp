@@ -6,7 +6,11 @@
 			        (click)="addPerson()">
 				Add person
 			</button>
-			<p *ngIf="show">{{message}} {{title}}</p>
+			<p *ngIf="show; else noPerson">{{message}} {{title}}</p>
+			<ng-template #noPerson>
+				<p>No added a person.</p>
+			</ng-template>
+
 			<app-person></app-person>
 
 			<label>Title Person</label>
