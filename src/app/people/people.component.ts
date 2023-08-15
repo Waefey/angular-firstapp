@@ -9,8 +9,10 @@ export class PeopleComponent {
 	disable: boolean = false;
 	message: string = 'No person was added.'
 	title: string = '';
+	show: boolean = false;
 
-	addPerson() {
+	addPerson(): void {
+		this.show = true;
 		this.message = 'Added a person.';
 	}
 }

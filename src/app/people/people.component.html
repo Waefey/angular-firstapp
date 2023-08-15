@@ -6,13 +6,12 @@
 			        (click)="addPerson()">
 				Add person
 			</button>
-			<p>{{message}}</p>
+			<p *ngIf="show">{{message}} {{title}}</p>
 			<app-person></app-person>
 
 			<label>Title Person</label>
 			<input type="text" class="form-control"
 			       [(ngModel)]="title">
-			{{title}}
 		</div>
 	</div>
 </div>
