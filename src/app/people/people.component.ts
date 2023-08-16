@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { PersonModel } from "../person/person.model";
 
 @Component({
 	selector: 'app-people',
@@ -8,10 +9,20 @@ import { Component } from "@angular/core";
 export class PeopleComponent {
 	disable: boolean = false;
 	message: string = 'No person was added.'
-	title: string = '';
+	title: string = 'List of Person';
 	show: boolean = false;
 
+	people: PersonModel[] = [
+		new PersonModel('Juan', 'Perez'),
+		new PersonModel('Laura', 'Juarez')
+	];
+
+	nameInput:string = '';
+	lastnameInput:string = '';
+
 	addPerson(): void {
+		let person = new PersonModel(this.nameInput, this.lastnameInput);
+		this.people.push(person);
 		this.show = true;
 		this.message = 'Added a person.';
 	}

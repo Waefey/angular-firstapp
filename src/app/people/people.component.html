@@ -1,21 +1,51 @@
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<h1> List of people </h1>
-			<button class="btn btn-primary" [disabled]="disable"
-			        (click)="addPerson()">
-				Add person
-			</button>
-			<p *ngIf="show; else noPerson">{{message}} {{title}}</p>
-			<ng-template #noPerson>
-				<p>No added a person.</p>
-			</ng-template>
-
-			<app-person></app-person>
-
-			<label>Title Person</label>
-			<input type="text" class="form-control"
-			       [(ngModel)]="title">
+			<h1>[{{title}}]</h1>
 		</div>
 	</div>
+</div>
+
+<div class="container">
+	<form class="row g-3">
+		<div class="col-12">
+			<label for="name" class="form-label">Name</label>
+			<input type="text" name="name" id="name" placeholder="Name"
+			       class="form-control"
+			       [(ngModel)]="nameInput">
+		</div>
+		<div class="col-12">
+			<label for="name" class="form-label">Lastname</label>
+			<input type="text" name="lastname" id="lastname" placeholder="Lastname"
+			       class="form-control"
+			       [(ngModel)]="lastnameInput">
+		</div>
+		<div class="col-12">
+			<button type="submit"
+			        class="btn btn-primary form-control"
+			        (click)="addPerson()">
+				Add
+			</button>
+		</div>
+	</form>
+</div>
+
+<div class="container">
+	<h2>{{title}}</h2>
+	<table class="table">
+		<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Lastname</th>
+		</tr>
+		</thead>
+		<tbody *ngFor="let person of people; let i = index">
+		<tr>
+			<th scope="row">{{i}}</th>
+			<td>{{person.name}}</td>
+			<td>{{person.lastname}}</td>
+		</tr>
+		</tbody>
+	</table>
 </div>
