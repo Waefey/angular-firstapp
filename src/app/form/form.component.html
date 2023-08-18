@@ -1,0 +1,24 @@
+<form class="row g-3">
+	<div class="col-12">
+		<h3>{{title}}</h3>
+	</div>
+	<div class="col-12">
+		<label for="name" class="form-label">Name</label>
+		<input type="text" name="name" id="name" placeholder="Name"
+		       class="form-control"
+		       [(ngModel)]="nameInput">
+	</div>
+	<div class="col-12">
+		<label for="lastname" class="form-label">Lastname</label>
+		<input type="text" name="lastname" id="lastname" placeholder="Lastname"
+		       class="form-control"
+		       [(ngModel)]="lastnameInput">
+	</div>
+	<div class="col-12">
+		<button type="submit"
+		        class="btn btn-primary form-control"
+		        (click)="addPerson()">
+			Add
+		</button>
+	</div>
+</form>
