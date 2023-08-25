@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<h1>[{{title}}]</h1>
+			<h1>{{title}}</h1>
 		</div>
 	</div>
 
@@ -9,7 +9,7 @@
 
 	<div class="container">
 		<app-form
-			(person)="addPerson($event)"
+			(person)="getPeople($event)"
 		></app-form>
 	</div>
 
@@ -17,10 +17,7 @@
 
 	<div class="container">
 		<app-person
-				*ngFor="let person of people; let i = index"
-				[person]="person"
-				[i]="i"
-		>
-		</app-person>
+			[people]="people"
+		></app-person>
 	</div>
 </div>

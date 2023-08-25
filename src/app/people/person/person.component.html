@@ -1,3 +1,8 @@
+
+<h3>{{title}}</h3>
+
+<hr>
+
 <table class="table">
 	<thead>
 	<tr>
@@ -7,10 +12,10 @@
 	</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<th scope="row">{{i}}</th>
-			<td>{{person.name}}</td>
-			<td>{{person.lastname}}</td>
-		</tr>
+	<tr *ngFor="let person of people; let i = index">
+		<th scope="row">{{i+1}}</th>
+		<td>{{person.name}}</td>
+		<td>{{person.lastname}}</td>
+	</tr>
 	</tbody>
 </table>

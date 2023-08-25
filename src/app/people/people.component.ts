@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { PersonModel } from "../person/person.model";
+import { Component, Input } from "@angular/core";
+import { PersonModel } from "./person/person.model";
 
 @Component({
 	selector: 'app-people',
@@ -7,18 +7,13 @@ import { PersonModel } from "../person/person.model";
 	styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
-	message: string = 'No person was added.'
-	show: boolean = false;
-	title: string = 'List of Person';
+	title: string = 'People App';
 
 	people: PersonModel[] = [
-		new PersonModel('Juan', 'Perez'),
-		new PersonModel('Laura', 'Juarez')
+		new PersonModel('Example', 'Person')
 	];
 
-	addPerson(person: PersonModel): void {
+	getPeople(person: PersonModel){
 		this.people.push(person);
-		this.show = true;
-		this.message = 'Added a person.';
 	}
 }

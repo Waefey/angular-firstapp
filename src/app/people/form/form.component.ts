@@ -7,7 +7,7 @@ import { PersonModel } from "../person/person.model";
 	styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-	title: string = '|Form of Person|';
+	title: string = 'Form of Person';
 
 	@Output() person = new EventEmitter<PersonModel>();
 

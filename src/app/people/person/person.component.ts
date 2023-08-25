@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { PersonModel } from "./person.model";
 
 @Component({
@@ -7,6 +7,7 @@ import { PersonModel } from "./person.model";
 	styleUrls: ['./person.component.css']
 })
 export class PersonComponent {
-	@Input() person: PersonModel;
-	@Input() i: number;
+	title:string = 'List of Person';
+
+	@Input() people: PersonModel[];
 }
