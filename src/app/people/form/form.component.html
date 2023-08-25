@@ -1,24 +1,23 @@
-<form class="row g-3">
-	<div class="col-12">
-		<h3>{{title}}</h3>
-	</div>
-	<div class="col-12">
+<form>
+	<h3>{{title}}</h3>
+
+	<hr>
+
+	<div class="form-check-inline">
 		<label for="name" class="form-label">Name</label>
 		<input type="text" name="name" id="name" placeholder="Name"
 		       class="form-control"
 		       #name>
 	</div>
-	<div class="col-12">
+	<div class="form-check-inline">
 		<label for="lastname" class="form-label">Lastname</label>
 		<input type="text" name="lastname" id="lastname" placeholder="Lastname"
 		       class="form-control"
 		       #lastname>
 	</div>
-	<div class="col-12">
-		<button type="submit"
-		        class="btn btn-primary form-control"
-		        (click)="addPerson(name, lastname)">
-			Add
-		</button>
-	</div>
+	<button type="submit"
+	        class="btn btn-primary"
+	        (click)="addPerson()">
+		Add
+	</button>
 </form>
