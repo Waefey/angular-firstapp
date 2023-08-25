@@ -11,11 +11,8 @@ export class FormComponent {
 
 	@Output() person = new EventEmitter<PersonModel>();
 
-	nameInput: string = '';
-	lastnameInput: string = '';
-
-	addPerson(): void {
-		let person = new PersonModel(this.nameInput, this.lastnameInput);
+	addPerson(name: HTMLInputElement, lastname: HTMLInputElement): void {
+		let person: PersonModel = new PersonModel(name.value, lastname.value);
 		this.person.emit(person);
 	}
 }
