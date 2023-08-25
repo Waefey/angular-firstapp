@@ -1,17 +1,15 @@
 <div class="container">
 	<h1>{{title}}</h1>
-	<form>
-		<div>
-			<label class="form-label">Operator A</label>
-			<input type="number" class="form-control" placeholder="Write operator A"
-			       [(ngModel)]="operatorA" name="operatorA">
-		</div>
-		<div>
-			<label class="form-label">Operator B</label>
-			<input type="number" class="form-control" placeholder="Write operator B"
-			       [(ngModel)]="operatorB" name="operatorB">
-		</div>
-		<button type="submit" class="btn btn-primary" (click)="sum()">SUM</button>
-	</form>
-	<p>Result: {{result}}</p>
+
+	<hr>
+
+	<app-calculator-form
+		(result)="getResult($event)"
+	></app-calculator-form>
+
+	<hr>
+
+	<app-calculator-result
+		[result] = "result"
+	></app-calculator-result>
 </div>

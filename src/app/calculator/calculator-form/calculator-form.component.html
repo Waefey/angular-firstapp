@@ -1,0 +1,15 @@
+<form>
+	<div class="form-check-inline">
+		<label class="form-label">Operator A</label>
+		<input type="number" class="form-control" placeholder="Write operator A"
+		       [(ngModel)]="operatorA" name="operatorA">
+	</div>
+	<div class="form-check-inline">
+		<label class="form-label">Operator B</label>
+		<input type="number" class="form-control" placeholder="Write operator B"
+		       [(ngModel)]="operatorB" name="operatorB">
+	</div>
+	<button type="submit" class="btn btn-primary"
+	        (click)="sum()">SUM
+	</button>
+</form>

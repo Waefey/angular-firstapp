@@ -7,14 +7,18 @@ import { PersonComponent } from './person/person.component';
 import { FormsModule } from "@angular/forms";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormComponent } from './form/form.component';
+import { CalculatorFormComponent } from './calculator/calculator-form/calculator-form.component';
+import { CalculatorResultComponent } from './calculator/calculator-result/calculator-result.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		PeopleComponent,
 		PersonComponent,
-  CalculatorComponent,
-  FormComponent
+		FormComponent,
+		CalculatorComponent,
+		CalculatorFormComponent,
+		CalculatorResultComponent
 	],
 	imports: [
 		BrowserModule,
