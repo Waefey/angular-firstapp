@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent {
-	title: string = '[Calculator App]';
+	title: string = 'Calculator App';
 
 	result: number;
 
