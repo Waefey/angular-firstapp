@@ -15,14 +15,13 @@ export class FormComponent {
 	@ViewChild('name') name: ElementRef;
 	@ViewChild('lastname') lastname: ElementRef;
 
-	constructor(private loggingService: LoggingService, private peopleService: PeopleServices) {
+	constructor(private peopleService: PeopleServices) {
 	}
 
 	addPerson(): void {
 		let person: PersonModel = new PersonModel(
 			this.name.nativeElement.value,
 			this.lastname.nativeElement.value);
-		this.loggingService.sendMessageToConsole("Person: " + person);
 		this.peopleService.addPerson(person);
 	}
 }

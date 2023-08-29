@@ -14,15 +14,10 @@ export class PeopleComponent implements OnInit{
 
 	people: PersonModel[] = [];
 
-	constructor(private loggingService: LoggingService,
-	            private peopleService: PeopleServices) {
+	constructor(private peopleService: PeopleServices) {
 	}
 
 	ngOnInit() {
 		this.people = this.peopleService.people;
-	}
-
-	getPeople(person: PersonModel) {
-		this.peopleService.addPerson(person);
 	}
 }
